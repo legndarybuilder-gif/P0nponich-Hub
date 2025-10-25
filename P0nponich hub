@@ -1,0 +1,85 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("P0nponich Hub", "RJTheme4")
+
+local Tab = Window:NewTab("LocalPlayer")
+
+
+local Section = Tab:NewSection(Player)
+
+
+Section:NewLabel("By P0nponich")
+
+
+
+
+Section:NewSlider("Speed", "Speed Slider", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+Section:NewButton("InfJump", "Jump Withwout Cd", function()
+    game:GetService("UserInputService").JumpRequest:Connect(function()
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end)
+end)
+
+
+
+Section:NewButton("TPClick", "Click to TP", function()
+    local tool = Instance.new("Tool"); tool.Name = "TPTool"; tool.RequiresHandle = false; tool.Activated:Connect(function() local ray = game:GetService("Players").LocalPlayer:GetMouse().UnitRay; local hit = workspace:Raycast(ray.Origin, ray.Direction * 1000); if hit then game:GetService("Players").LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(hit.Position + Vector3.new(0, 3, 0))) end end); tool.Parent = game:GetService("Players").LocalPlayer.Backpack
+end)
+
+
+
+Section:NewButton("Esp", "See all players", function()
+    _G.ESPEnabled = true; for _,player in pairs(game:GetService("Players"):GetPlayers()) do if player ~= game.Players.LocalPlayer then local function setupESP() if _G.ESPEnabled and player.Character then local highlight = Instance.new("Highlight"); highlight.Parent = player.Character; highlight.Adornee = player.Character; highlight.FillColor = Color3.fromRGB(255, 0, 0); local billboard = Instance.new("BillboardGui"); billboard.Parent = player.Character.Head; billboard.Adornee = player.Character.Head; billboard.Size = UDim2.new(0, 200, 0, 50); billboard.StudsOffset = Vector3.new(0, 3, 0); local label = Instance.new("TextLabel"); label.Parent = billboard; label.Size = UDim2.new(1, 0, 1, 0); label.Text = player.Name; label.BackgroundTransparency = 1; label.TextColor3 = Color3.fromRGB(255, 255, 255); label.TextScaled = true end end; setupESP(); player.CharacterAdded:Connect(setupESP) end end
+end)
+
+
+
+Section:NewToggle("Noclip", "Walk through walls", function(state)
+    if state then
+        _G.NoclipConnection = game:GetService("RunService").Stepped:Connect(function() if game.Players.LocalPlayer.Character then for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do if v:IsA("BasePart") then v.CanCollide = false end end end end)
+    else
+        if _G.NoclipConnection then _G.NoclipConnection:Disconnect() _G.NoclipConnection = nil end
+    end
+end)
+
+
+
+Section:NewButton("Aimbot", "Aimbot", function()
+    _G.Aimbot = true; while _G.Aimbot and wait(0.1) do local target, health = nil, math.huge; for _,p in pairs(game:GetService("Players"):GetPlayers()) do if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Humanoid") and p.Character.Humanoid.Health > 0 and p.Character:FindFirstChild("Head") then if p.Character.Humanoid.Health < health then target = p; health = p.Character.Humanoid.Health end end end; if target then game:GetService("Workspace").CurrentCamera.CFrame = CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.Position, target.Character.Head.Position) end end
+end)
+
+
+Section:NewButton("Fly", "Fly across map", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+
+
+
+
+Section:NewButton("LowGraphics", "Remove shadows and effects", function()
+    game:GetService("Lighting").GlobalShadows = false; game:GetService("Lighting").FogEnd = 100000; game:GetService("Lighting").Brightness = 2; game:GetService("Lighting").GeographicLatitude = 0; game:GetService("Lighting").Ambient = Color3.new(1,1,1); game:GetService("Lighting").Outlines = false; game:GetService("Lighting").Technology = "Compatibility"; settings().Rendering.QualityLevel = 1
+end)
+
+
+Section:NewButton("Invis", "make yourself invisible", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+end)
+
+
+
+
+local Tab = Window:NewTab("Other")
+
+
+local Section = Tab:NewSection(Other)
+
+Section:NewButton("Infinity yield", ".idk", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+Section:NewButton("Dex Explorer", ".idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+end)

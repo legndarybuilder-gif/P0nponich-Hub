@@ -49,7 +49,7 @@ end)
 
 
 Section:NewButton("Aimbot", "Aimbot", function()
-    _G.Aimbot = true; while _G.Aimbot and wait(0.1) do local target, health = nil, math.huge; for _,p in pairs(game:GetService("Players"):GetPlayers()) do if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Humanoid") and p.Character.Humanoid.Health > 0 and p.Character:FindFirstChild("Head") then if p.Character.Humanoid.Health < health then target = p; health = p.Character.Humanoid.Health end end end; if target then game:GetService("Workspace").CurrentCamera.CFrame = CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.Position, target.Character.Head.Position) end end
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hakariqScripts/aimbot-script/refs/heads/main/aimbot%20script"))()
 end)
 
 

@@ -83,3 +83,50 @@ end)
 Section:NewButton("Dex Explorer", ".idk", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
 end)
+
+
+
+local Tab = Window:NewTab("Games")
+
+
+local Section = Tab:NewSection(Games)
+
+Section:NewButton("99 nights in the forest", ".idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua", true))()
+end)
+
+
+Section:NewButton("Fisch", ".idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+end)
+
+
+
+Section:NewButton("Murder Mystery", ".idk", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring'))()
+end)
+
+
+
+Section:NewButton("Steal A Brainrot", ".idk", function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Steal-a-Brainrot-Lennon-hub-v5-52358"))()
+end)
+
+
+
+
+Section:NewButton("Brookhaven", ".idk", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/main/Brook%20Haven%20Gui'))()
+end)
+
+
+
+Section:NewButton("War Tycoon", ".idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JinxTheCatto/Neptune/main/NeptuneHub.lua"))()
+end)
+
+
+
+Section:NewButton("Coming Soon more...", ".idk", function()
+
+end)

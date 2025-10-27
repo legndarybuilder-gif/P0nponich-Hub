@@ -127,6 +127,14 @@ end)
 
 
 
+Section:NewButton("Murder vs sheriff", ".idk", function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Murderers-VS-Sheriffs-Duels-ZEPHYR-MVSD-SCRIPT-KEYLESS-36170"))()
+end)
+
+
+
+
 Section:NewButton("Coming Soon more...", ".idk", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheqopThe/robax/refs/heads/main/jumpscare.lua"))()
 end)
+

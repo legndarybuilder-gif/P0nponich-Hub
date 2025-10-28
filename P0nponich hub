@@ -138,6 +138,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/decryp1/Combat-Warrio
 end)
 
 
+Section:NewButton("Evade", ".idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JScripter-Lua/Mid-Journey_Open-Source/refs/heads/main/Evade%20Lag%20Free%20Test.lua"))()
+end)
+
+
 Section:NewButton("Coming Soon more...", ".idk", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheqopThe/robax/refs/heads/main/jumpscare.lua"))()
 end)

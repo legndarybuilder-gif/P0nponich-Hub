@@ -133,6 +133,10 @@ end)
 
 
 
+Section:NewButton("Combat Warriors", "Bannable", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/decryp1/Combat-Warriors-script/refs/heads/main/HerkleHubSolara%26Xeno"))()
+end)
+
 
 Section:NewButton("Coming Soon more...", ".idk", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheqopThe/robax/refs/heads/main/jumpscare.lua"))()

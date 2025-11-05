@@ -86,6 +86,21 @@ end)
 
 
 
+Section:NewTextBox("Execute", "Script Executor", function(txt)
+    local success, result = pcall(function()
+        if string.find(txt, "game:HttpGet") then
+            loadstring(txt)()
+        else
+            loadstring(game:HttpGet(txt))()
+        end
+    end)
+    if not success then
+        warn("Script error: " .. tostring(result))
+    end
+end)
+
+
+
 local Tab = Window:NewTab("Games")
 
 

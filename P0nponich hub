@@ -162,3 +162,11 @@ Section:NewButton("Build A boat For Treasure", ".idk", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/TheRealAsu/BABFT/refs/heads/main/Source.lua'))()
 end)
 
+
+Section:NewButton("Bee Swarm Simulator", ".idk", function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Bee-Swarm-Simulator-Kron-Hub-20936"))()
+end)
+
+
+
+

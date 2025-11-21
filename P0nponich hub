@@ -170,3 +170,23 @@ end)
 
 
 
+local Tab = Window:NewTab("Misc")
+
+
+local Section = Tab:NewSection(Misc)
+
+Section:NewLabel("Dev: P0nponich")
+
+Section:NewLabel("Scripter: Mithyc Builder")
+
+Section:NewLabel("Testers: Mithyc Builder,P0nponich,")
+
+Section:NewButton("Telegram", "Our Telegram Channel", function()
+    setclipboard("https://t.me/P0nponichHubofc")
+end)
+
+Section:NewButton("Discrod", "Our Discord Channel", function()
+    setclipboard("https://discord.gg/rpmFdRKMV")
+end)
+
+Section:NewLabel("Thanks For Using Our Script!")

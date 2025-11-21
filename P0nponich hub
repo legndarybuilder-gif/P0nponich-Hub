@@ -170,7 +170,7 @@ end)
 
 
 
-local Tab = Window:NewTab("Misc")
+local Tab = Window:NewTab("☆    Misc")
 
 
 local Section = Tab:NewSection(Misc)
